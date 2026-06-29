@@ -1,0 +1,15 @@
+# 빌드 산출물
+.build/
+*.app/
+.swiftpm/
+DerivedData/
+
+# 아이콘 중간 산출물 (AppIcon.svg / AppIcon.icns 는 커밋)
+assets/AppIcon.iconset/
+
+# macOS
+.DS_Store
+
+# 임시
+spikes/*.o
+*.swiftmodule

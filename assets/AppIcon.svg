@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1024" height="1024" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- 그래파이트 스퀴클 그라데이션 (어두운 메뉴바 느낌) -->
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#3A3F47"/>
+      <stop offset="0.55" stop-color="#23262C"/>
+      <stop offset="1" stop-color="#15171B"/>
+    </linearGradient>
+    <!-- 상단 미세 하이라이트 -->
+    <linearGradient id="sheen" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#FFFFFF" stop-opacity="0.16"/>
+      <stop offset="0.18" stop-color="#FFFFFF" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="amber" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#FFC65C"/>
+      <stop offset="1" stop-color="#F5972A"/>
+    </linearGradient>
+    <filter id="softShadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="10" stdDeviation="14" flood-color="#000000" flood-opacity="0.30"/>
+    </filter>
+  </defs>
+
+  <!-- 스퀴클 본체 (macOS 앱 아이콘 그리드: 824 콘텐츠, 100 마진) -->
+  <g filter="url(#softShadow)">
+    <rect x="100" y="100" width="824" height="824" rx="185" ry="185" fill="url(#bg)"/>
+    <rect x="100" y="100" width="824" height="824" rx="185" ry="185" fill="url(#sheen)"/>
+    <rect x="100.5" y="100.5" width="823" height="823" rx="184.5" ry="184.5" fill="none" stroke="#FFFFFF" stroke-opacity="0.08" stroke-width="2"/>
+  </g>
+
+  <!-- 메뉴바: 상단의 흰색 알약 바 + 아이콘 점들 (앰버 액센트 1개) -->
+  <g>
+    <rect x="250" y="318" width="524" height="92" rx="46" ry="46" fill="#FFFFFF"/>
+    <circle cx="330" cy="364" r="22" fill="#2A2D33"/>
+    <circle cx="418" cy="364" r="22" fill="#2A2D33"/>
+    <circle cx="506" cy="364" r="22" fill="url(#amber)"/>
+    <circle cx="594" cy="364" r="22" fill="#2A2D33"/>
+    <circle cx="682" cy="364" r="22" fill="#2A2D33"/>
+  </g>
+
+  <!-- 펼침 셰브론 (가려진 아이콘을 꺼냄) -->
+  <path d="M 512 690
+           L 392 540
+           L 452 540
+           L 512 615
+           L 572 540
+           L 632 540
+           Z"
+        fill="#FFFFFF"/>
+
+  <!-- 펼쳐진 패널 힌트: 하단 점 3개 (꺼내진 아이콘) -->
+  <g fill="#FFFFFF" opacity="0.92">
+    <circle cx="452" cy="724" r="20"/>
+    <circle cx="512" cy="724" r="20"/>
+    <circle cx="572" cy="724" r="20"/>
+  </g>
+</svg>
