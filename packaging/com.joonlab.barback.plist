@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Barback 로그인 시 자동 실행 (LaunchAgent)
+  설치:
+    cp packaging/com.joonlab.barback.plist ~/Library/LaunchAgents/
+    launchctl load ~/Library/LaunchAgents/com.joonlab.barback.plist
+  제거:
+    launchctl unload ~/Library/LaunchAgents/com.joonlab.barback.plist
+    rm ~/Library/LaunchAgents/com.joonlab.barback.plist
+-->
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>Label</key><string>com.joonlab.barback</string>
+    <key>ProgramArguments</key>
+    <array>
+        <string>/usr/bin/open</string>
+        <string>-a</string>
+        <string>/Applications/Barback.app</string>
+    </array>
+    <key>RunAtLoad</key><true/>
+    <key>ProcessType</key><string>Interactive</string>
+</dict>
+</plist>
